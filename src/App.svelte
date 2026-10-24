@@ -1,5 +1,5 @@
 <script>
-  import Homework0501 from './05/Homework0501.svelte';
+  import Event03 from './06/Event03.svelte';
 </script>
 
-<Homework0501 />
+<Event03 />
