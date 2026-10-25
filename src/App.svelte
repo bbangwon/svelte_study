@@ -1,5 +1,5 @@
 <script>
-  import Event03 from './06/Event03.svelte';
+  import Event05 from './06/Event05.svelte';
 </script>
 
-<Event03 />
+<Event05 />
