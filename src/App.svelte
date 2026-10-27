@@ -1,5 +1,5 @@
 <script>
-  import QuestionParent from "./07/QuestionParent.svelte";
+  import Homework from "./08/Homework.svelte";
 </script>
 
-<QuestionParent />
+<Homework />
