@@ -1,5 +1,5 @@
 <script>
-  import Homework from "./08/Homework.svelte";
+  import Comp from "./09/Input05.svelte";
 </script>
 
-<Homework />
+<Comp />
