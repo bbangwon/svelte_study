@@ -1,5 +1,5 @@
 <script>
-  import Comp from "./10/Parent02.svelte";
+  import Comp from "./11/SlotParent02.svelte";
 </script>
 
 <Comp />
