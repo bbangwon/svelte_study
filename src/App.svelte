@@ -1,5 +1,5 @@
 <script>
-  import Comp from "./11/SlotParent04.svelte";
+  import Comp from "./11/QuestionParent.svelte";
 </script>
 
 <Comp />
