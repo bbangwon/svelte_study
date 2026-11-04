@@ -1,5 +1,5 @@
 <script>
-  import Comp from "./12/Parent.svelte";
+  import Comp from "./12/Update02.svelte";
 </script>
 
 <Comp />
