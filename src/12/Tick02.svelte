@@ -2,7 +2,7 @@
   import { tick } from "svelte";
 
   let isElementView = $state(false);
-  let input;
+  let input = $state();
 
   const handleClick = (param) => {
     isElementView = param;
