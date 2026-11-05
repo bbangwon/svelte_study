@@ -1,5 +1,5 @@
 <script>
-  import Comp from "./12/Tick03.svelte";
+  import Comp from "./13/PropsEvent.svelte";
 </script>
 
 <Comp />
