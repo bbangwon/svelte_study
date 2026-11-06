@@ -1,5 +1,5 @@
 <script>
-  import Comp from "./14/Readable.svelte";
+  import Comp from "./14/Binding.svelte";
 </script>
 
 <Comp />
