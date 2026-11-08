@@ -1,5 +1,5 @@
 <script>
-  import Comp from "./16/CrossFadeBasic.svelte";
+  import Comp from "./16/Custom02.svelte";
 </script>
 
 <Comp />
