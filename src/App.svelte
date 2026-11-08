@@ -1,5 +1,5 @@
 <script>
-  import Comp from "./16/Scale02.svelte";
+  import Comp from "./16/Draw.svelte";
 </script>
 
 <Comp />
