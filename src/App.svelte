@@ -1,5 +1,5 @@
 <script>
-  import Comp from "./17/SpringBasic.svelte";
+  import Comp from "./18/Action03.svelte";
 </script>
 
 <Comp />
