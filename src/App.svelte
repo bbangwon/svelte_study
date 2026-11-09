@@ -1,5 +1,5 @@
 <script>
-  import Comp from "./16/Modifiers.svelte";
+  import Comp from "./17/Animate03.svelte";
 </script>
 
 <Comp />
