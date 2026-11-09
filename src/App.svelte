@@ -1,5 +1,5 @@
 <script>
-  import Comp from "./18/Action03.svelte";
+  import Comp from "./18/Action06.svelte";
 </script>
 
 <Comp />
