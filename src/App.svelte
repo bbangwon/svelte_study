@@ -1,5 +1,5 @@
 <script>
-  import Comp from "./19/SlotParent03.svelte";
+  import Comp from "./20/BucketListApp.svelte";
 </script>
 
 <Comp />

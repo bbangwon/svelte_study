@@ -15,7 +15,9 @@
     "vite": "^8.3.4"
   },
   "dependencies": {
+    "@iconify/svelte": "^5.2.4",
     "elizabot": "^0.0.3",
-    "svelte-dnd-action": "^0.9.80"
+    "svelte-dnd-action": "^0.9.80",
+    "uuid": "^14.0.3"
   }
 }
