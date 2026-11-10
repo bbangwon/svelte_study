@@ -1,18 +1,23 @@
 <script>
+  import { buckets, bucketText } from "../store";
   import Icon from "@iconify/svelte";
-
-  let { bucketText, onDataChange, onSubmit } = $props();
 
   let open = $state(false);
 
   const onToggle = () => {
     open = !open;
-    if (!open) {
-      bucketText = "";
-    }
+    bucketText.resetForm();
+  };
+  const onClose = () => (open = false);
+
+  const onDataChange = (e) => {
+    $bucketText = e.target.value;
   };
 
-  const onClose = () => (open = false);
+  const onSubmit = (e) => {
+    e.preventDefault();
+    buckets.onSubmit($bucketText);
+  };
 </script>
 
 <div class="bucketcreate">
@@ -26,7 +31,7 @@
       <input
         type="text"
         placeholder="추가할 버킷 리스트를 입력 후, Enter를 누르세요."
-        bind:value={bucketText}
+        bind:value={$bucketText}
         onchange={onDataChange}
       />
     </form>

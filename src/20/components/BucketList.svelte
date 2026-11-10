@@ -1,23 +1,14 @@
 <script>
-  import BucketItem from "./BucketItem.svelte";
+  import { buckets } from "../store.js";
   import { fade, slide } from "svelte/transition";
   import { flip } from "svelte/animate";
-
-  let { buckets, onToggle, onRemove, editMode, onEditMode, onEditKeyup } =
-    $props();
+  import BucketItem from "./BucketItem.svelte";
 </script>
 
 <div class="bucketlist">
-  {#each buckets as bucket, index (bucket.id)}
+  {#each $buckets.buckets as bucket, index (bucket.id)}
     <div in:fade out:slide animate:flip>
-      <BucketItem
-        {bucket}
-        {onToggle}
-        {onRemove}
-        {editMode}
-        {onEditMode}
-        {onEditKeyup}
-      />
+      <BucketItem {bucket} />
     </div>
   {/each}
 </div>
