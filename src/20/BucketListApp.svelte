@@ -3,9 +3,11 @@
   import BucketList from "./components/BucketList.svelte";
   import BucketCreate from "./components/BucketCreate.svelte";
   import { initialBuckets } from "./bucketData.js";
+  import { v4 as uuidv4 } from "uuid";
 
   let buckets = $state(initialBuckets);
   let editMode = $state("");
+  let bucketText = $state("");
 
   //체크 개수를 담은 반응성 변수 선언
   let chkCount = $derived(buckets.filter((bucket) => !bucket.chk).length);
@@ -43,9 +45,29 @@
     offEditMode();
   };
 
+  // 엔터 키 입력 시 편집 항목 적용
   const onEditKeyup = (e, editBucket) => {
     if (e.keyCode === 13) {
       onEditItem(editBucket);
+    }
+  };
+
+  // 새로운 항목 추가
+  const onDataChange = (e) => {
+    bucketText = e.target.value;
+  };
+
+  //
+  const onSubmit = (e) => {
+    e.preventDefault();
+
+    if (bucketText) {
+      const bucket = {
+        id: uuidv4(),
+        text: bucketText,
+        chk: false,
+      };
+      buckets = [...buckets, bucket];
     }
   };
 </script>
@@ -64,5 +86,5 @@
     {onEditMode}
     {onEditKeyup}
   />
-  <BucketCreate />
+  <BucketCreate {bucketText} {onDataChange} {onSubmit} />
 </div>
