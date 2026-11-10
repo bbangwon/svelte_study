@@ -5,6 +5,49 @@
   import { initialBuckets } from "./bucketData.js";
 
   let buckets = $state(initialBuckets);
+  let editMode = $state("");
+
+  //체크 개수를 담은 반응성 변수 선언
+  let chkCount = $derived(buckets.filter((bucket) => !bucket.chk).length);
+
+  //이벤트 함수
+  //1. chk 속성값 변경 - CSS 변화가 된다고 값이 변경되지 않음
+  const onToggle = (id) => {
+    buckets = buckets.map((bucket) => {
+      return bucket.id === id ? { ...bucket, chk: !bucket.chk } : bucket;
+    });
+  };
+
+  const onRemove = (id) => {
+    buckets = buckets.filter((bucket) => bucket.id !== id);
+  };
+
+  // 편집 모드 설정
+  const onEditMode = (id) => {
+    editMode = id;
+  };
+
+  // 편집 모드 해제
+  const offEditMode = () => {
+    editMode = "";
+  };
+
+  // 편집 항목 적용
+  const onEditItem = (editBucket) => {
+    buckets = buckets.map((bucket) => {
+      if (bucket.id === editBucket.id) {
+        bucket = editBucket;
+      }
+      return bucket;
+    });
+    offEditMode();
+  };
+
+  const onEditKeyup = (e, editBucket) => {
+    if (e.keyCode === 13) {
+      onEditItem(editBucket);
+    }
+  };
 </script>
 
 <svelte:head>
@@ -12,7 +55,14 @@
   <link rel="stylesheet" href="./20/global.css" />
 </svelte:head>
 <div class="bucketbox">
-  <BucketHeader />
-  <BucketList {buckets} />
+  <BucketHeader {chkCount} />
+  <BucketList
+    {buckets}
+    {onToggle}
+    {onRemove}
+    {editMode}
+    {onEditMode}
+    {onEditKeyup}
+  />
   <BucketCreate />
 </div>
