@@ -9,7 +9,7 @@
 </script>
 
 <div class="bucketitem">
-  <input type="checkbox" id={chkId} bind:checked={bucket.chk} />
+  <input type="checkbox" id={chkId} checked={bucket.chk} />
   <label
     for={chkId}
     class="checkcircle"
@@ -22,7 +22,7 @@
   {#if editMode === bucket.id}
     <input
       type="text"
-      bind:value={bucket.text}
+      value={bucket.text}
       onkeyup={(e) => onEditKeyup(e, bucket)}
     />
   {:else}
