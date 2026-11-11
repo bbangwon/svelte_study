@@ -13,7 +13,7 @@
 <Header />
 <Router {url}>
   <Route path="/"><Main /></Route>
-  <Route path="/map"><Map /></Route>
+  <Route path="/map/:id" let:params><Map id={params.id} /></Route>
   <Route path="/company"><Company /></Route>
   <Route path="*"><NotFound /></Route>
 </Router>
