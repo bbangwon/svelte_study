@@ -1,5 +1,5 @@
 <script>
-  import Comp from "./25/Swiper01.svelte";
+  import Comp from "./26/MovingApp.svelte";
 </script>
 
 <Comp />
