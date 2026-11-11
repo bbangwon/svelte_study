@@ -1,5 +1,5 @@
 <script>
-  import Comp from "./21/BestTourApp.svelte";
+  import Comp from "./22/basic/BasicApp.svelte";
 </script>
 
 <Comp />
