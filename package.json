@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@iconify/svelte": "^5.2.4",
+    "axios": "^1.21.1",
     "elizabot": "^0.0.3",
     "query-string": "^10.0.0",
     "svelte-dnd-action": "^0.9.80",
