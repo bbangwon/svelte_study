@@ -4,7 +4,7 @@
 </script>
 
 <ul>
-  {#each $bests as best, index (best)}
+  {#each $bests as best, index (best.id)}
     <BestItem {best} />
   {/each}
 </ul>
