@@ -1,5 +1,5 @@
 <script>
-  import Comp from "./23/Await01.svelte";
+  import Comp from "./24/Tmdb.svelte";
 </script>
 
 <Comp />
