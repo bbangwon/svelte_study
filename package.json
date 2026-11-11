@@ -20,6 +20,7 @@
     "elizabot": "^0.0.3",
     "query-string": "^10.0.0",
     "svelte-dnd-action": "^0.9.80",
+    "svelte-loading-spinners": "^0.3.6",
     "svelte-routing": "^2.13.0",
     "swiper": "^14.4.0",
     "uuid": "^14.0.3"
