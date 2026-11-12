@@ -9,9 +9,9 @@
 </script>
 
 {#await promise}
-  <div>로딩중</div>
-{:then}
   <LoadingList />
+{:then}
+  <NowList datas={$nows} />
 {:catch error}
   <Error />
 {/await}
