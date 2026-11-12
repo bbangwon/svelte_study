@@ -1,7 +1,7 @@
 import axios from "axios";
 import { writable } from "svelte/store";
 
-const ACCESS_TOKEN = "YOUR_ACCESS_TOKEN";
+const ACCESS_TOKEN = "";
 
 //1. 프로미스
 const setPromise = (url) => {
