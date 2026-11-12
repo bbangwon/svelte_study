@@ -27,8 +27,11 @@
   <Route path="/top"><TopPage /></Route>
   <Route path="/upcoming"><UpcomingPage /></Route>
   <Route path="/now/:id" let:params><NowSubPage id={params.id} /></Route>
-  <Route path="/popular/:id"><PopularSubPage /></Route>
-  <Route path="/top/:id"><TopSubPage /></Route>
-  <Route path="/upcoming/:id"><UpcomingSubPage /></Route>
+  <Route path="/popular/:id" let:params><PopularSubPage id={params.id} /></Route
+  >
+  <Route path="/top/:id" let:params><TopSubPage id={params.id} /></Route>
+  <Route path="/upcoming/:id" let:params
+    ><UpcomingSubPage id={params.id} /></Route
+  >
 </Router>
 <Footer />
